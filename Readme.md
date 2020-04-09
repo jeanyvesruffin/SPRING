@@ -98,6 +98,7 @@ choco install springtoolsuite
 * Création projet Maven
 * Configuration de Spring
 * Configuration de Bean
+* injection par un setter: le conteneur invoque le constructeur puis invoque les setters de l'instance pour fournir chaque instance des dépendances
 
 
 ## Construit avec
