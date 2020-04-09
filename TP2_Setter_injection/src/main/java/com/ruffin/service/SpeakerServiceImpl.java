@@ -4,7 +4,6 @@ package com.ruffin.service;
 import java.util.List;
 
 import com.ruffin.model.Speaker;
-import com.ruffin.repository.HibernateSpeakerRepositoryImpl;
 import com.ruffin.repository.IHibernateSpeakerRepository;
 
 public class SpeakerServiceImpl implements ISpeakerService {
@@ -30,7 +29,6 @@ public class SpeakerServiceImpl implements ISpeakerService {
 	public void setHibernateSpeakerRepository(IHibernateSpeakerRepository hibernateSpeakerRepository) {
 		this.hibernateSpeakerRepository = hibernateSpeakerRepository;
 	}
-	
 	
 };
 

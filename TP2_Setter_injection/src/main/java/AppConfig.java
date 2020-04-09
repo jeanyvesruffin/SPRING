@@ -19,6 +19,7 @@ public class AppConfig {
 
 	// Nous declarons une methode qui nous retourne "le contrat" de l'interface
 	// que l'on mettra dans un bean (Spring Bean)
+	
 	@Bean(name = "speakerService")
 	public ISpeakerService getISpeakerService() {
 		SpeakerServiceImpl service = new SpeakerServiceImpl();
@@ -29,6 +30,7 @@ public class AppConfig {
 	
 	// integration d'un nouveau bean pour la gestion du setter setHibernateSpeakerRepository
 	//Setter injection
+	
 	@Bean(name = "speakerRepository")
 	public IHibernateSpeakerRepository getSpeakerRepository() {
 		return new HibernateSpeakerRepositoryImpl();
