@@ -1,6 +1,8 @@
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import com.ruffin.repository.HibernateSpeakerRepositoryImpl;
+import com.ruffin.repository.IHibernateSpeakerRepository;
 import com.ruffin.service.ISpeakerService;
 import com.ruffin.service.SpeakerServiceImpl;
 
@@ -19,7 +21,18 @@ public class AppConfig {
 	// que l'on mettra dans un bean (Spring Bean)
 	@Bean(name = "speakerService")
 	public ISpeakerService getISpeakerService() {
-		return new SpeakerServiceImpl();
+		SpeakerServiceImpl service = new SpeakerServiceImpl();
+		service.setHibernateSpeakerRepository(getSpeakerRepository());
+		return service;
+		
+	}
+	
+	// integration d'un nouveau bean pour la gestion du setter setHibernateSpeakerRepository
+	//Setter injection
+	@Bean(name = "speakerRepository")
+	public IHibernateSpeakerRepository getSpeakerRepository() {
+		return new HibernateSpeakerRepositoryImpl();
+		
 	}
 
 }
