@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ruffin</groupId>
-	<artifactId>TP1_Architecture_Installation</artifactId>
+	<artifactId>TP1_Architecture_Installation-java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<dependencies>
 		<dependency>
@@ -11,7 +11,6 @@
 			<artifactId>spring-context</artifactId>
 			<version>5.2.5.RELEASE</version>
 		</dependency>
-
 	</dependencies>
 	<build>
 		<plugins>
@@ -26,5 +25,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
