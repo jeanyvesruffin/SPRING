@@ -1,7 +1,6 @@
-D:\WORK\Eclipse\SandBox\SPRING\TP4_Scopes_and_Autowiring\src\main\java\Application.java
-D:\WORK\Eclipse\SandBox\SPRING\TP4_Scopes_and_Autowiring\src\main\java\com\ruffin\model\Speaker.java
-D:\WORK\Eclipse\SandBox\SPRING\TP4_Scopes_and_Autowiring\src\main\java\com\ruffin\repository\HibernateSpeakerRepositoryImpl.java
-D:\WORK\Eclipse\SandBox\SPRING\TP4_Scopes_and_Autowiring\src\main\java\com\ruffin\service\SpeakerServiceImpl.java
-D:\WORK\Eclipse\SandBox\SPRING\TP4_Scopes_and_Autowiring\src\main\java\AppConfig.java
-D:\WORK\Eclipse\SandBox\SPRING\TP4_Scopes_and_Autowiring\src\main\java\com\ruffin\repository\IHibernateSpeakerRepository.java
-D:\WORK\Eclipse\SandBox\SPRING\TP4_Scopes_and_Autowiring\src\main\java\com\ruffin\service\ISpeakerService.java
+D:\WORK\Eclipse\SandBox\SPRING\TP1_Architecture_Installation\src\main\java\com\ruffin\service\ISpeakerService.java
+D:\WORK\Eclipse\SandBox\SPRING\TP1_Architecture_Installation\src\main\java\com\ruffin\model\Speaker.java
+D:\WORK\Eclipse\SandBox\SPRING\TP1_Architecture_Installation\src\main\java\com\ruffin\repository\IHibernateSpeakerRepository.java
+D:\WORK\Eclipse\SandBox\SPRING\TP1_Architecture_Installation\src\main\java\Application.java
+D:\WORK\Eclipse\SandBox\SPRING\TP1_Architecture_Installation\src\main\java\com\ruffin\repository\HibernateSpeakerRepositoryImpl.java
+D:\WORK\Eclipse\SandBox\SPRING\TP1_Architecture_Installation\src\main\java\com\ruffin\service\SpeakerServiceImpl.java

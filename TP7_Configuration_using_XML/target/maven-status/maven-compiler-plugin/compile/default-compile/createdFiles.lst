@@ -1,7 +1,6 @@
-AppConfig.class
 com\ruffin\repository\HibernateSpeakerRepositoryImpl.class
-com\ruffin\repository\IHibernateSpeakerRepository.class
-com\ruffin\model\Speaker.class
 com\ruffin\service\SpeakerServiceImpl.class
+com\ruffin\repository\IHibernateSpeakerRepository.class
 com\ruffin\service\ISpeakerService.class
 Application.class
+com\ruffin\model\Speaker.class

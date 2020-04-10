@@ -1,7 +1,6 @@
 package com.ruffin.model;
 
 
-// Class Speaker definit se qu'est un orateur
 public class Speaker {
 	
 	private String firstName;
