@@ -6,5 +6,6 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan({"com.ruffin"})
 public class AppConfig {
 
+	// Nous utilisons ici le fichier de configuration applicationContext.xml
 	
 }

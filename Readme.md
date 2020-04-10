@@ -106,6 +106,7 @@ choco install springtoolsuite
 * Configuration utilisant XML
 * Cycle de vie d'un Bean
 * FactoryBean
+* Sping Expression Language
 
 
 ## Construit avec
