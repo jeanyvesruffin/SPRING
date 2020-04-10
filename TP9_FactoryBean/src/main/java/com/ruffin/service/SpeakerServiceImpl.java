@@ -29,9 +29,6 @@ public class SpeakerServiceImpl implements ISpeakerService {
 		System.out.println("Constructeur SpeakerServiceImpl SANS ARGS ");
 	}
 
-	// @PostConstruct permet l'execution de la methode apres
-	// la l'injection du constructeur et avant le run
-	
 	@PostConstruct
 	private void initialize() {
 		System.out.println("Nous sommes appelé après le constructeur");

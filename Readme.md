@@ -105,6 +105,7 @@ choco install springtoolsuite
 * Stereotypes
 * Configuration utilisant XML
 * Cycle de vie d'un Bean
+* FactoryBean
 
 
 ## Construit avec
