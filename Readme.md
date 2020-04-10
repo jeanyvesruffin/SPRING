@@ -100,8 +100,9 @@ choco install springtoolsuite
 * Configuration de Bean
 * Injection de setter
 * Injection de constructeur
-* Spring scopes
-* Spring autowire
+* Scopes
+* Autowired
+* Stereotypes
 
 
 ## Construit avec
