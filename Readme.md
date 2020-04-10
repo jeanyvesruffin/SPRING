@@ -103,6 +103,7 @@ choco install springtoolsuite
 * Scopes
 * Autowired
 * Stereotypes
+* Configuration utilisant XML
 
 
 ## Construit avec
