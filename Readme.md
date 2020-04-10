@@ -99,7 +99,7 @@ choco install springtoolsuite
 * Configuration de Spring
 * Configuration de Bean
 * Injection de setter
-* Injection de construteur
+* Injection de constructeur
 
 
 ## Construit avec
