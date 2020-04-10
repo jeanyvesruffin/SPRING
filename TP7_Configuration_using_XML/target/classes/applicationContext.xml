@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="speakerRepository"
+		class="com.ruffin.repository.HibernateSpeakerRepositoryImpl">
+	</bean>
+	<!-- Technique sur setter injection
+	<bean name="speakerService"
+		class="com.ruffin.service.SpeakerServiceImpl">
+		<property name="speakerRepository" ref="speakerRepository">
+		</property>
+	</bean> 
+	-->
+	
+	<!-- Technique sur constructeur injection
+	<bean name="speakerService"
+		class="com.ruffin.service.SpeakerServiceImpl">
+		<constructor-arg index = "0" ref="speakerRepository">
+		</constructor-arg>
+	</bean>-->
+	<!-- Techniquesur autowired constructor
+	<bean name="speakerService"
+		class="com.ruffin.service.SpeakerServiceImpl" autowire="constructor">
+	</bean> -->
+	<!-- Technique sur autowired byType -->
+	<bean name="speakerService"
+		class="com.ruffin.service.SpeakerServiceImpl" autowire="byType">
+	</bean>
+	<!-- Technique sur autowired byName
+	<bean name="speakerService"
+		class="com.ruffin.service.SpeakerServiceImpl" autowire="byName">
+	</bean> -->
+	
+</beans>
