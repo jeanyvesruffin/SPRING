@@ -5,3 +5,4 @@ com\ruffin\model\Speaker.class
 com\ruffin\service\SpeakerServiceImpl.class
 com\ruffin\service\ISpeakerService.class
 Application.class
+com\ruffin\util\CalendarFactory.class

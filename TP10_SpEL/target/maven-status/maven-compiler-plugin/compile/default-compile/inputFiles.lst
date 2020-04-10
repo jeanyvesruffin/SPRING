@@ -1,7 +1,8 @@
-D:\WORK\Eclipse\SandBox\SPRING\TP8_Bean_Lifecycle\src\main\java\Application.java
-D:\WORK\Eclipse\SandBox\SPRING\TP8_Bean_Lifecycle\src\main\java\com\ruffin\service\ISpeakerService.java
-D:\WORK\Eclipse\SandBox\SPRING\TP8_Bean_Lifecycle\src\main\java\com\ruffin\repository\HibernateSpeakerRepositoryImpl.java
-D:\WORK\Eclipse\SandBox\SPRING\TP8_Bean_Lifecycle\src\main\java\com\ruffin\service\SpeakerServiceImpl.java
-D:\WORK\Eclipse\SandBox\SPRING\TP8_Bean_Lifecycle\src\main\java\AppConfig.java
-D:\WORK\Eclipse\SandBox\SPRING\TP8_Bean_Lifecycle\src\main\java\com\ruffin\model\Speaker.java
-D:\WORK\Eclipse\SandBox\SPRING\TP8_Bean_Lifecycle\src\main\java\com\ruffin\repository\IHibernateSpeakerRepository.java
+D:\WORK\Eclipse\SandBox\SPRING\TP10_SpEL\src\main\java\com\ruffin\repository\HibernateSpeakerRepositoryImpl.java
+D:\WORK\Eclipse\SandBox\SPRING\TP10_SpEL\src\main\java\com\ruffin\repository\IHibernateSpeakerRepository.java
+D:\WORK\Eclipse\SandBox\SPRING\TP10_SpEL\src\main\java\Application.java
+D:\WORK\Eclipse\SandBox\SPRING\TP10_SpEL\src\main\java\com\ruffin\model\Speaker.java
+D:\WORK\Eclipse\SandBox\SPRING\TP10_SpEL\src\main\java\com\ruffin\service\SpeakerServiceImpl.java
+D:\WORK\Eclipse\SandBox\SPRING\TP10_SpEL\src\main\java\com\ruffin\service\ISpeakerService.java
+D:\WORK\Eclipse\SandBox\SPRING\TP10_SpEL\src\main\java\com\ruffin\util\CalendarFactory.java
+D:\WORK\Eclipse\SandBox\SPRING\TP10_SpEL\src\main\java\AppConfig.java

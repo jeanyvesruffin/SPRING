@@ -13,6 +13,7 @@ public class Application {
 		SpeakerServiceImpl serviceSingleton1 = appContext.getBean("speakerService", SpeakerServiceImpl.class);
 		System.out.println(serviceSingleton1);
 		System.out.println(serviceSingleton1.findAll().get(0).getFirstName());
+		System.out.println(serviceSingleton1.findAll().get(0).getSeedNum());
 
 	}
 }
