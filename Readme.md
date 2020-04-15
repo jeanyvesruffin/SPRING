@@ -78,6 +78,17 @@ choco install telnet
 ```
 choco install springtoolsuite
 ```
+**PostgreSQL11.7**
+
+```
+choco install postgresql11
+```
+**Postman for Windows 7.20.1**
+
+```
+choco install postman
+```
+
 
 **PLUGINS ECLIPSE**
 
@@ -109,6 +120,22 @@ choco install springtoolsuite
 * Expression Language
 * Bean profil
 
+## Création d'une application de planification de réunion
+
+ 1. Creation Project Object Model (POM) à l'aide du site Spring.io:
+
+ Générer votre projet à l'aide de [spring.io]( https://start.spring.io/) - Spring initializr.
+ Autres sollutions et de générer le projet à l'aide de son IDE ou bien à l'aide de Spring Boot CLI.
+ Decrompresser le projet, faire l'importation dans son IDE run clean/ install Maven du .pom puis update.
+ 
+ Création de 4 packages:
+ * Controllers ==> API controllers
+ * Models ==> Java Persistance API et autres info persistance.
+ * Repositories ==> JPA repository
+ * Services ==> service et code logic
+ 
+ 2.Installation de postgres et initilisation des tables et des datas à l'aide du repository [github](https://github.com/dlbunker/ps-first-spring-boot-app/tree/master/database/postgresql)
+ 
 
 ## Construit avec
 
