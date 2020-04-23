@@ -137,26 +137,26 @@ Rencontrant des difficultés à utiliser postgresql, j'ai installé postgresql en s
 ## Création d'une application de planification de réunion
  (https://github.com/jeanyvesruffin/Heroku.git)
 
- 	1. Creation Project Object Model (POM) à l'aide du site Spring.io:
+**Creation Project Object Model (POM) à l'aide du site Spring.io:**
 
  Générer votre projet à l'aide de [spring.io]( https://start.spring.io/) - Spring initializr.
  Autres solutions et de générer le projet à l'aide de son IDE ou bien à l'aide de Spring Boot CLI.
  Decrompresser le projet genere à travers spring.io, faire l'importation dans son IDE run clean/ install Maven du .pom puis update.
  
- Création de 4 packages:
+ 1. Création de 4 packages:
  * Controllers ==> API controllers
  * Models ==> Java Persistance API et autres info persistance.
  * Repositories ==> JPA repository
  * Services ==> service et code logic
  
  
- 	2. Installation de postgres et initilisation des tables et des datas à l'aide du repository [github](https://github.com/dlbunker/ps-first-spring-boot-app/tree/master/database/postgresql)
+2. Installation de postgres et initilisation des tables et des datas à l'aide du repository [github](https://github.com/dlbunker/ps-first-spring-boot-app/tree/master/database/postgresql)
  
- 	3. Créer les fichiers de configuration nécessaire à l'accès à la base de données
+ Créer les fichiers de configuration nécessaire à l'accès à la base de données
  
- 	4. Déployement application sur environnement Jelly vs Tomcat
+ Déployement application sur environnement Jelly vs Tomcat
  
- 	5. Déployement en mode standalone
+ Déployement en mode standalone
 	
 Générer le .jar avec Maven et avec son paramètre goal renseigné à package (vs clean install ..etc)
 Retrouvé le fichier de déployement dans le dossier Target (first-Spring-Boot-Application-0.0.1-SNAPSHOT.jar)
@@ -176,7 +176,7 @@ BUG FIX: attention de fermer l'execution du .jar precedent et quitter le termina
 
 On execute ensuite la commande Maven package puis dans un terminal pointant sur le dossier target executer la commande: $ ./first-Spring-Boot-Application-0.0.1-SNAPSHOT.jar
 
- 	6. Déployement sur cloud Heroku
+ Déployement sur cloud Heroku
  
  Autres alternatives: Cloud Foundry,  Heroku, Google Cloud, Amazon Web Services, Microsoft Azure
  
