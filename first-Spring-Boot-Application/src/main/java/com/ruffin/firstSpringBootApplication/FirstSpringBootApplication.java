@@ -11,7 +11,7 @@ public class FirstSpringBootApplication {
 	}
 
 
-	// Pour tester notre API avec  POSTMAN, nous pouvons consulter par ex lessessions en envoyant la requete
+	// Pour tester notre API avec  POSTMAN, nous pouvons consulter par ex les sessions en envoyant la requete
 
 	// EXEMPLE TEST API POSTMAN  pour READ toutes les  datas
 

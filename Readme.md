@@ -13,6 +13,8 @@ Sous Windows:
 L'utilisation de chocolotey comme gestionnaire de package a été utilisé.
 
  [Installer chocolatey](https://chocolatey.org/)
+ 
+Deployement cloud sur Heroku.
 
 ### L'installation
 
@@ -84,6 +86,12 @@ choco install springtoolsuite
 ```
 choco install postman
 ```
+**Heroku Command Line Interface (CLI) (Install) 7.39.3.0**
+
+```
+choco install heroku-cli
+```
+
 
 Rencontrant des difficultés à utiliser postgresql, j'ai installé postgresql en suivant le [tutoriel](https://www.youtube.com/watch?reload=9&v=P-MvoWl5U-o) 
 
@@ -96,6 +104,7 @@ Rencontrant des difficultés à utiliser postgresql, j'ai installé postgresql en s
 - Spring Tools 3 (standalone Edition) 3.9.12.RELEASE
 - Spring Tools 3 Add-On for Spring Tools 4 3.9.12.RELEASE
 - Spring Tools 4 (aka Spring Tool Suite 4) 4.6.0.RELEASE
+- ResourceBundle Editor
 
 
 
@@ -117,13 +126,18 @@ Rencontrant des difficultés à utiliser postgresql, j'ai installé postgresql en s
 * FactoryBean
 * Expression Language
 * Bean profil
-* Utilisation de SpringBoot pour créer l'application + création et connexion à la base de données postgresql
-* Création de l'api Rest et ces methode CRUD pour l'application Spring Boot + test sur Postman
+* Création application avec connexion à la base de données postgresql
+* Création de l'api Rest et de ces methodes CRUD et test API sur Postman
 * Travail sur la configuration et l'environnement (prod, dev ..) Spring Boot
+* Deployement de l'application sur Jelly vs Tomcat
+* Déployement en mode standalone
+* Déployement cloud Heroku
+* Création du fichier WAR pour le deployement sping boot
 
 ## Création d'une application de planification de réunion
+ (https://github.com/jeanyvesruffin/Heroku.git)
 
- 1. Creation Project Object Model (POM) à l'aide du site Spring.io:
+ 	1. Creation Project Object Model (POM) à l'aide du site Spring.io:
 
  Générer votre projet à l'aide de [spring.io]( https://start.spring.io/) - Spring initializr.
  Autres solutions et de générer le projet à l'aide de son IDE ou bien à l'aide de Spring Boot CLI.
@@ -135,8 +149,95 @@ Rencontrant des difficultés à utiliser postgresql, j'ai installé postgresql en s
  * Repositories ==> JPA repository
  * Services ==> service et code logic
  
- 2.Installation de postgres et initilisation des tables et des datas à l'aide du repository [github](https://github.com/dlbunker/ps-first-spring-boot-app/tree/master/database/postgresql)
- 3.Créer les fichiers de configuration nécessaire à l'accès à la base de données
+ 
+ 	2. Installation de postgres et initilisation des tables et des datas à l'aide du repository [github](https://github.com/dlbunker/ps-first-spring-boot-app/tree/master/database/postgresql)
+ 
+ 	3. Créer les fichiers de configuration nécessaire à l'accès à la base de données
+ 
+ 	4. Déployement application sur environnement Jelly vs Tomcat
+ 
+ 	5. Déployement en mode standalone
+	
+Générer le .jar avec Maven et avec son paramètre goal renseigné à package (vs clean install ..etc)
+Retrouvé le fichier de déployement dans le dossier Target (first-Spring-Boot-Application-0.0.1-SNAPSHOT.jar)
+Executer le fichier jar a l'aide d'un terminal (pointant sur le dossier target) $ java -jar first-Spring-Boot-Application-0.0.1-SNAPSHOT.jar
+
+La seconde méthode consiste à creer notre executable à travers le fichier .pom. Pour cela ajouter au build le tag configuration
+
+	<plugin>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-maven-plugin</artifactId>
+		<configuration>
+			<executable>true</executable>
+		</configuration>
+	</plugin>
+  
+BUG FIX: attention de fermer l'execution du .jar precedent et quitter le terminal sinon genere une erreur.
+
+On execute ensuite la commande Maven package puis dans un terminal pointant sur le dossier target executer la commande: $ ./first-Spring-Boot-Application-0.0.1-SNAPSHOT.jar
+
+ 	6. Déployement sur cloud Heroku
+ 
+ Autres alternatives: Cloud Foundry,  Heroku, Google Cloud, Amazon Web Services, Microsoft Azure
+ 
+ Pour plus de flexibilité, nous devrons dockeriser notre application (Dockers, Kubernate)
+ 
+ Si nous utilisons une offre cloud, il faut garder à l'esprit que pour chaque cloud une configuration sera nécessaire pour gérer:
+ 
+- Logging
+- Integration de service
+- Firewall annd sécurité
+ 
+Apres avoir créé un compte heroku, puis avoir fait "new projet".
+
+Nous connectons notre projet git au projet Heroku.
+
+Bug fix Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile (default-compile) on project:
+
+	<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-compiler-plugin</artifactId>
+		<configuration>
+			<source>1.8</source>
+			<target>1.8</target>
+		</configuration>
+	</plugin>
+
+Une fois l'app deployé sur Heroku celle-ci nous retourne la version de l'app.
+
+Si l'on interroge https://conference-demo-ruffin.herokuapp.com/api/v1/sessions cela nous retourne la page Spring Whitelabel Error Page. Car en effet, la base de données n'est pas configuré dans Heroku.
+
+Ajout des ressources pour acces base de données dans Heroku. 
+
+Premièrement commenter la configuration de connection à la base de données qui se trouve dans le fichier de configuration PersistenceConfiguration.
+
+Secondement, dans Heroku, cliquer sur setting puis sur Reveal Config Vars et indiquer sur key ==>  DB_URL rappellez-vous: c'est celle indiquée dans le fichier de configuration application.properties:
+	
+	spring.datasource.url = ${DB_URL}
+	
+et sur value copier/coller celle du dessus.
+
+
+Dans Heroku cliquer sur Heroku PostGres> selectionner votre projet > Settings > Database Credentials.
+
+Gardez cette page ouverte dans votre navigateur.
+
+Dans PostGres, creer un nouvelles connexions serveur avec les données de Herokus.
+
+Rechercher sur le serveur Heroku votre base de données (la list est longue ...).
+
+Executer les scripts pour creer et remplir votre base de donnée.
+
+Enfin, il est nécessaire de configurer Dyno (c'est le nom donné par Heroku pour Container') ici on initialise 1 container web=1 . Pour cela executer la commande suivante (adapter le nom de votre projet: ici conference-demo-ruffin)
+
+	heroku ps:scale web=1 -a conference-demo-ruffin
+
+ 7. Deployement sur tomcat a l'aide d'un fichier war
+
+bugfix si l'on veux que la page d'accueil Tomcat fonctionne, ouvrir en mode admin une fenetre de cmd aller dans le repertoire bin et faire startup.
+
+Pour avoir acces a l'api a travers le war genere copie/coller le dans le dossier webapps de tomcat. Demarrer le serveur et appeler notre api.
+
 
 ## Construit avec
 
