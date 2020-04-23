@@ -143,7 +143,7 @@ Rencontrant des difficultés à utiliser postgresql, j'ai installé postgresql en s
  Autres solutions et de générer le projet à l'aide de son IDE ou bien à l'aide de Spring Boot CLI.
  Decrompresser le projet genere à travers spring.io, faire l'importation dans son IDE run clean/ install Maven du .pom puis update.
  
- 1. Création de 4 packages:
+1. Création de 4 packages:
  * Controllers ==> API controllers
  * Models ==> Java Persistance API et autres info persistance.
  * Repositories ==> JPA repository
@@ -152,11 +152,11 @@ Rencontrant des difficultés à utiliser postgresql, j'ai installé postgresql en s
  
 2. Installation de postgres et initilisation des tables et des datas à l'aide du repository [github](https://github.com/dlbunker/ps-first-spring-boot-app/tree/master/database/postgresql)
  
- Créer les fichiers de configuration nécessaire à l'accès à la base de données
+3. Créer les fichiers de configuration nécessaire à l'accès à la base de données
  
- Déployement application sur environnement Jelly vs Tomcat
+4. Déployement application sur environnement Jelly vs Tomcat
  
- Déployement en mode standalone
+5.Déployement application en mode standalone
 	
 Générer le .jar avec Maven et avec son paramètre goal renseigné à package (vs clean install ..etc)
 Retrouvé le fichier de déployement dans le dossier Target (first-Spring-Boot-Application-0.0.1-SNAPSHOT.jar)
@@ -172,11 +172,11 @@ La seconde méthode consiste à creer notre executable à travers le fichier .pom. 
 		</configuration>
 	</plugin>
   
-BUG FIX: attention de fermer l'execution du .jar precedent et quitter le terminal sinon genere une erreur.
+**BUG FIX:** attention de fermer l'execution du .jar precedent et quitter le terminal sinon genere une erreur.
 
 On execute ensuite la commande Maven package puis dans un terminal pointant sur le dossier target executer la commande: $ ./first-Spring-Boot-Application-0.0.1-SNAPSHOT.jar
 
- Déployement sur cloud Heroku
+6. Déployement sur cloud Heroku
  
  Autres alternatives: Cloud Foundry,  Heroku, Google Cloud, Amazon Web Services, Microsoft Azure
  
@@ -232,7 +232,7 @@ Enfin, il est nécessaire de configurer Dyno (c'est le nom donné par Heroku pour 
 
 	heroku ps:scale web=1 -a conference-demo-ruffin
 
- 7. Deployement sur tomcat a l'aide d'un fichier war
+7. Deployement sur tomcat a l'aide d'un fichier war
 
 bugfix si l'on veux que la page d'accueil Tomcat fonctionne, ouvrir en mode admin une fenetre de cmd aller dans le repertoire bin et faire startup.
 
