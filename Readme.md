@@ -156,7 +156,7 @@ Rencontrant des difficultés à utiliser postgresql, j'ai installé postgresql en s
  
 4. Déployement application sur environnement Jelly vs Tomcat
  
-5.Déployement application en mode standalone
+5. Déployement application en mode standalone
 	
 Générer le .jar avec Maven et avec son paramètre goal renseigné à package (vs clean install ..etc)
 Retrouvé le fichier de déployement dans le dossier Target (first-Spring-Boot-Application-0.0.1-SNAPSHOT.jar)
