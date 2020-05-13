@@ -110,6 +110,16 @@ Rencontrant des difficultés à utiliser postgresql, j'ai installé postgresql en s
 
 *En cours d'édition End with an example of getting some data out of the system or using it for a little demo*
 
+### Maven Dependency
+
+* spring-boot-starter-web
+* spring-boot-starter-jetty
+* spring-boot-starter-data-jpa
+* postgresql
+* spring-boot-starter-test
+* spring-boot-maven-plugin
+
+
 ## Sommaire des concepts étudiés
 
 * Presentation de Spring et ces concepts
